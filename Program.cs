@@ -6,20 +6,6 @@ namespace LibraryManagmentSystem
     public class Author
     {
         public string Name { get; set; }
-        public string Bio { get; set; }
-
-        public Author(string name, string bio)
-        {
-            Name = name;
-            Bio = bio;
-        }
-    }
-
-    public class Book
-    {
-        public string Name { get; set; }
-        public string Title { get; set; }
-    }
 
     public class Library
     {
