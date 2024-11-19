@@ -19,7 +19,7 @@ namespace LibraryManagmentSystem
         public string Title { get; set; }
         public Author[] Authors { get; set; } 
         public string ISBN { get; set; }
-
+        
         public Book(string title, string isbn, Author[] authors)
         {
             Title = title;
@@ -123,30 +123,24 @@ namespace LibraryManagmentSystem
         {
             Console.WriteLine("\n\"LIBRARY MANAGMENT SYSTEM\"");
 
-            // Creating authors
             Author author1 = new Author("J.K. Rowling", "British author, best known for the Harry Potter series.");
             Author author2 = new Author("J.R.R. Tolkien", "English author and academic, known for The Lord of the Rings.");
 
-            // Creating books
             Book book1 = new Book("Harry Potter and the Sorcerer's Stone", "978-0747532699", new Author[] { author1 });
             Book book2 = new Book("The Lord of the Rings", "978-0618640157", new Author[] { author2 });
             Book book3 = new Book("Harry Potter and the Chamber of Secrets", "978-0747538493", new Author[] { author1 });
 
-            // Creating library
             Library library = new Library(5);  
             library.AddBook(book1);
             library.AddBook(book2);
             library.AddBook(book3);
 
-            // Listing all books in the library
             Console.WriteLine("Listing all books in the library:");
             library.ListAllBooks();
 
-            // Searching for books by title
             Console.WriteLine("\nSearching for books by title (Harry Potter):");
             library.SearchByTitle("Harry Potter");
 
-            // Searching for books by author
             Console.WriteLine("\nSearching for books by author (J.K. Rowling):");
             library.SearchByAuthor("J.K. Rowling");
 
